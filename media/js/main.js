@@ -11,6 +11,21 @@ holds the response of the user during the session, array of objects having quest
 */
 var response = []; 
 
+/*
+holds the num of the current question
+*/
+var current = -1;
+
+function populate_questions() {
+	var html = "";
+	for(obj in set) {
+		var qno = "Q. "+set[obj].num;
+		var frame = "<button id='q"+set[obj].num+"' class='quesbutton unattempted-ques'>"+qno+"</button>"
+		html += frame;
+	}
+	$("#questionsList").html(html);
+}
+
 
 
 function updateScore(current) {
@@ -20,11 +35,12 @@ function updateScore(current) {
 
 $("#start_test").click(function() {
 	$("#start_panel").hide();
+	populate_questions();
 	$("#quesanspanel").show();
 
 	// start the timer and set up handler to update clock.
 
-	
+
 });
 
 
