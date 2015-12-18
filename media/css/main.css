@@ -1,0 +1,247 @@
+/* if u change the css, which u will, dont do anything to the `NEEDED` css - that will remain as-it-is */
+
+/* universal */
+*
+{
+	cursor: default;
+	font-family: "ASans";
+	margin: 0;
+	overflow: hidden;
+}
+
+body,html {height: 100%;background-color: #f1f1f1; }
+
+/* Blackout */
+
+.blackout {
+	display:none;
+	position:fixed;
+	background-color: rgba(0,0,0,0.90);
+	width:100%;
+	height:100%;
+	z-index:2;
+}
+
+#quesanspanel {
+	display: none;
+}
+
+.closeBox {
+	position:fixed;
+	color:white;
+	right:0px;
+	padding:20px;
+	font-size:15px;
+	cursor: pointer;
+	z-index:5;
+}
+
+.blackoutContent {
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:4;
+	display:none;
+}
+
+.blackoutContentWrapper {
+	background-color: #f1f1f1;
+	border-radius: 5px;
+	overflow-y:hidden;
+	overflow-x: hidden;
+	margin-top:5%;
+	z-index:4;
+	width:500px;
+	margin-left: calc(50% - 250px);
+	height:550px;
+	margin-top:5%;
+	box-shadow: 0px 0px 0px 5px #cf4635;
+}
+
+/* Blackout Styling Ends */
+
+
+/* topbar */
+.topBar {
+	top: 0px;
+	position: fixed;
+	width:100%;
+	z-index: 1;
+	height: 60px;
+	background: #333;
+	box-shadow:  0px -1px 20px 0px #000;
+}
+.head {
+	font-size:40px;
+	font-weight: 900;
+	text-align: justify;
+	height:60px;
+	line-height: 60px;
+	padding-left:10px;
+	padding-right: 30px;
+	float:left;
+	color:white;
+	border-left: 5px solid #70067b;
+	border-right: 20px solid #70067b;
+	background: #92069d;
+	text-shadow: 1px 1px 1px black;
+}
+.topContainer1 {
+	height:100%;
+	border-left: 25px solid #e00c2f;
+	border-right: 10px solid #e00c2f;
+	background: #ff2a4d;
+	vertical-align: central;
+	padding: 0% 20px 0% 10px;
+	width: 90px;
+	float:right;
+	color:white;
+	line-height: 50px;
+	font-weight: 900;
+	font-size: 60px;
+	text-align: center;
+}
+
+
+/* topbar styling ends */
+
+/* right elements*/
+
+.rightBox {
+	position: fixed;
+	right: 20px;
+	width: 320px;
+	border-radius: 5px;
+	background-color: #e3e3e3;
+	overflow: hidden;
+}
+
+
+.questions {
+	top: 80px;
+	height: calc(100% - 90px);
+}
+
+.header {
+	font-weight: 700;
+	width: calc(100%);
+	line-height: 40px;
+	height: 40px;
+}
+
+.shopHeader {
+	background-color: #a9e339;
+	border-bottom: 5px solid #8bcc0e;
+}
+
+.questionsHeader {
+	background-color: #fbab20;
+	border-bottom: 5px solid #db9419;
+}
+
+.rightIcon {
+	height: 20px;
+	margin-bottom: 	-5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.powerWrapper {
+	width: 138px;
+	margin: 10px 10px;
+	float: left;
+	border: 1px solid #bbb;
+	height: 100px;
+	border-radius: 10px;
+}
+
+.questionsList {
+	width: 320px;
+	height: 110px;
+	//border: 1px solid black;
+	margin: 2px;
+	height: calc(100% - 60px);
+	overflow-y: scroll;
+}
+
+.qButton {
+	width: 50px;
+	margin: 5px;
+	height: 40px;
+	border: 1px solid white;
+}
+
+/* right elements styling end */
+
+/* IOWrwpper */
+
+.IOWrapper {
+	top: 80px;
+	left: 10px;
+	position: fixed;
+	width: calc(100% - 370px);
+	height: calc(100% - 90px);
+	border-radius: 5px;
+	border: 1px solid #ddd;
+}
+
+.IOHeader{
+	margin: 10px 0%;
+	height: 40px;
+	padding-left: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.levelBox {
+	float: left;
+	font-weight: 900;
+	width: 100px;
+	border-radius: 5px;
+	font-size: 24px;
+	text-align: center;
+	margin: 2px;
+	background-color: #e54444;
+	color: white;
+}
+
+.numQuestion {
+	float: left;
+	width: 300px;
+	border-radius: 5px;
+	font-size: 24px;
+	margin: 2px;
+	margin-left: 10px;
+}
+
+.IOContent {
+	font-weight: 300;
+	padding: 20px;
+	font-size: 18px;
+	text-align: justify;
+}
+
+.IOAnswerWrapper {
+    position:absolute;
+    bottom:0px;
+    height:60px;
+    width: 100%;
+    background: #ddd;
+    border-top:1px solid #ccc;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.answerSubmit {
+    border:0px solid black;
+    margin: 3px;
+    font-size: 18px;
+    border-radius: 3px;
+    height: auto;
+    width: auto;
+    padding: 5px 15px;
+    background: #238dd0;
+    color:white;
+}
+
+/* IOWrapper Styling end */
