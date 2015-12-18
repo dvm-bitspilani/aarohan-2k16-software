@@ -16,26 +16,77 @@ holds the num of the current question
 */
 var current = -1;
 
-function populate_questions() {
+
+
+/*
+popullates the question sidebar and add event listeners
+*/
+function populateQuestionsList() {
 	var html = "";
 	for(obj in set) {
 		var qno = "Q. "+set[obj].num;
-		var frame = "<button id='q"+set[obj].num+"' class='quesbutton unattempted-ques'>"+qno+"</button>"
+		var frame = "<button id='q"+set[obj].num+"' value='"+set[obj].num+"' class='quesbutton unattempted-ques'>"+qno+"</button>"
 		html += frame;
 	}
 	$("#questionsList").html(html);
+
+	$(".quesbutton").click(function() {
+		flushQuestion($(this).attr("value"));
+	});
 }
 
 
+/*
+Changes to a specific question on the panel 
+*/
+function flushQuestion(number) {
+	var quesEntry = null;
+	for(var i=0;i<set.length;i++) {
+		if(set[i].num == number) {
+			quesEntry = set[i];
+			break;
+		}
+ 	}
 
-function updateScore(current) {
-    
+ 	if(quesEntry != null) {
+
+	 	$("#qno").html(number);
+
+	 	var questionhtml = quesEntry.ques;
+	 	if (quesEntry.ques_img != null) {
+	 		questionhtml += "<br><img src='"+quesEntry.ques_img+"' />"
+	 	}
+
+	 	$("#IOContent").html("");
+	 	$("#IOContent").append(questionhtml+"<br><br>");
+
+	 	var optionshtml = ""
+
+	 	for(var j=0;j<quesEntry['options'].length;j++) {
+	 		if(quesEntry['options'][j]['type'] == 'text')
+	 			optionshtml += "<input type='radio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 	}
+
+		$("#IOContent").append(optionshtml);
+
+		current = number;
+	}
+
+	else {
+		console.log("call to : "+number);
+		console.log("privacy tampered !");
+	}
+
 }
 
 
+/*
+Start button click event.
+*/
 $("#start_test").click(function() {
 	$("#start_panel").hide();
-	populate_questions();
+	populateQuestionsList();
+	flushQuestion(1);
 	$("#quesanspanel").show();
 
 	// start the timer and set up handler to update clock.
@@ -44,36 +95,15 @@ $("#start_test").click(function() {
 });
 
 
-
-
-$('.qButton').click(function() {
-	var attempted = $(this).hasClass('nonClickableQuestion');
-	var queriedFor = parseInt($(this).html().substring(1));
-	if(!attempted) {
-		$.ajax({
-			url : '/question/',
-			type : "GET",
-			data : $.param({ no : queriedFor }),
-			success : function(data) {
-				if(data.status == 1)
-					$('#numQuestion').html('Question '+queriedFor);
-					$('#IOContent').html(data.content);
-					presentQuestion = queriedFor;
-					canUseDoubleDip = data.cdd;
-			}
-		});
-	}
+$("#back").click(function() {
+	flushQuestion((Math.abs(current-2)%(set.length)) + 1);
 });
 
-$('#answerSubmit').click(function() {
-	var ans = $('#answerBox').val();
-	var ddu = (doubleDipUsed==0)?false:true;
-	$.ajax({
-		url : '/question/',
-		type : "POST",
-		data : $.param({ answer : ans, no : presentQuestion, dd : ddu }),
-		success : function(data) {
-			alert(data);
-		}
-	});	
+
+$("#skip").click(function() {
+	flushQuestion(((current)%(set.length)) + 1);
+});
+
+$("mark-answer").click(function() {
+	
 });

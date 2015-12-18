@@ -15,7 +15,7 @@ QUESTION SET :
 
 
 var set = [ 
-	{ 'num' : 1, 'cat' : 'chemistry' ,'ques' : 'what is your name', 'ques_img' : '', 'options' : [{'type' : 'text' , 'desc' : 'mr wayne'}, {'type' : 'text' , 'desc' : 'batman'}, {'type' : 'text' , 'desc' : 'none'}], 'correct' : 0, 'scoring' : [3,-1,0]},
-	{ 'num' : 2, 'cat' : 'chemistry' ,'ques' : 'what is your name', 'ques_img' : '', 'options' : [{'type' : 'text' , 'desc' : 'mr wayne'}, {'type' : 'text' , 'desc' : 'batman'}, {'type' : 'text' , 'desc' : 'none'}], 'correct' : 0, 'scoring' : [3,-1,0]},
+	{ 'num' : 1, 'cat' : 'chemistry' ,'ques' : 'what is your name', 'ques_img' : null, 'options' : [{'type' : 'text' , 'desc' : 'mr wayne'}, {'type' : 'text' , 'desc' : 'batman'}, {'type' : 'text' , 'desc' : 'none'}], 'correct' : 0, 'scoring' : [3,-1,0]},
+	{ 'num' : 2, 'cat' : 'chemistry' ,'ques' : 'ques 2', 'ques_img' : null, 'options' : [{'type' : 'text' , 'desc' : '2 mr wayne'}, {'type' : 'text' , 'desc' : '2 batman'}, {'type' : 'text' , 'desc' : '2 none'}], 'correct' : 0, 'scoring' : [3,-1,0]},
 	
 	]
