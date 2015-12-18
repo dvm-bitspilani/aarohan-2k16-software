@@ -10,6 +10,9 @@ var stage = 0;
 holds the response of the user during the session, array of objects having question no and response (a,b,c,d)
 */
 var response = []; 
+for(var i = 0;i<set.length;i++) {
+	response[i] = { 'num' : (i+1), 'response' : null, 'visited' : false, 'visits' : 0};
+}
 
 /*
 holds the num of the current question
@@ -63,13 +66,25 @@ function flushQuestion(number) {
 	 	var optionshtml = ""
 
 	 	for(var j=0;j<quesEntry['options'].length;j++) {
-	 		if(quesEntry['options'][j]['type'] == 'text')
-	 			optionshtml += "<input type='radio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 		if(quesEntry['options'][j]['type'] == 'text') {
+	 			if(response[number-1].response == j)
+	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 			else 
+	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 		}
+	 		else if(quesEntry['options'][j]['type'] == 'image')
+	 			if(response[number-1].response == j)
+	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
+	 			else 
+	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
+
 	 	}
 
 		$("#IOContent").append(optionshtml);
 
 		current = number;
+		response[number-1].visited = true;
+		response[number-1].visits++;
 	}
 
 	else {
@@ -104,6 +119,15 @@ $("#skip").click(function() {
 	flushQuestion(((current)%(set.length)) + 1);
 });
 
-$("mark-answer").click(function() {
-	
+$("#save").click(function() {
+	var ans = $("input:checked").val()
+	if(ans == undefined) {
+		response[current-1].response = null;
+	}
+	else {
+		response[current-1].response = Number(ans);
+	}
+
+	flushQuestion((Math.abs(current-2)%(set.length)) + 1);
+
 });
