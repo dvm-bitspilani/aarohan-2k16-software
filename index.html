@@ -16,7 +16,7 @@
 		</div>
 	</div>
 
-	<div id="start_panel">
+	<div id="start_panel" style="display:none;">
 		aarohan ka logo, rules and regulations, start test button !<br>
 		<button id="start_test">start button</button>
 	</div>
@@ -61,35 +61,41 @@
 	</div>
 
 	<div id="warnquitpanel">
-		Are you sure you want to quit ? there is no going back... 
+		<div class="abs_center" style="height:30%;">
+		<div style="color: #eee;font-size: 35px;">Are you sure you want to quit ? There is no going back... </div>
 		<button id="warnquitreturn">return back</button>
 		<button id="warnquitconfirm">quit</button>
+		</div>
 	</div>
 
 
-	<div id="testendpanel">
-		the test has ended.  
-		<button id="scorecalcbutton">click here to calculate score</button>
+	<div id="testendpanel" class="abs_center">
+		<div  class="abs_center" style="height:30%;text-align:center;color: #eee;font-size: 40px;">
+		The test has ended. <br>
+		<button id="scorecalcbutton">Click here to calculate score</button>
+		</div>
 	</div>
 
-	<div id="feedbackpanel">
+	<div id="feedbackpanel" class="abs_center" style="display:block;">
 		<!--  
 		display score and feedback form
 		-->
-		feedback
-		<div class="scoreHolder">
-			Your score is : <div class="scoreIs"></div>
-		</div>
-		<div class="feedback_form">
-			<form>
-			Name  : <br><input required id="feedbackName"><br>
-			Email : <br><input required type="email" id="feedbackMail"><br>
-			Phone No : <br><input required id="feedbackPhno"><br>
-			Any Improvements or Suggestions regarding AAROHAN 2016 : <br>
-			<textarea id="feedbackField"></textarea>
-			<input type="submit" id="feedbackSubmit">
-			</form>
-		</div>
+		<div style="height:80%;text-align:center;">
+			<div class="scoreHolder">
+			Your score is : <div class="scoreIs">45</div>
+			</div>
+			<h3>FEEDBACK</h3>
+			<div class="feedback_form">
+				<form>
+				Name  : <br><input required id="feedbackName"><br>
+				Email : <br><input required type="email" id="feedbackMail"><br>
+				Phone No : <br><input required id="feedbackPhno"><br>
+				Any Improvements or Suggestions regarding AAROHAN 2016 : <br>
+				<textarea id="feedbackField"></textarea>
+				<input type="submit" id="feedbackSubmit">
+				</form>
+			</div>
+		</div>	
 	</div>
 
 

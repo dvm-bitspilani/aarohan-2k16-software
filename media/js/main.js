@@ -120,8 +120,10 @@ function renderTime() {
 	if(sec==0)
 	{
 		clearInterval(timer);
-		//do something
-		alert("time is up");
+		$("#quesanspanel").hide();
+		$("#testendpanel").show();
+		stage = 3;
+		
 	}
 }
 
@@ -224,7 +226,7 @@ quit test button
 */
 $("#quitTest").click(function() {
 	if(stage == 1) {
-		$("#quesanspanel").hide();
+		// $("#quesanspanel").hide();
 		$("#warnquitpanel").show();
 		stage = 2;
 	}
@@ -237,7 +239,7 @@ warn page return button, brings you back to test.
 */
 $("#warnquitreturn").click(function() {
 	if(stage == 2) {			
-		$("#quesanspanel").show();
+		// $("#quesanspanel").show();
 		$("#warnquitpanel").hide();
 		stage = 1;
 	}
@@ -249,9 +251,11 @@ irrationally quits the game, go home you are drunk.
 */
 $("#warnquitconfirm").click(function() {
 	if(stage == 2) {
+		$("#quesanspanel").hide();
 		$("#warnquitpanel").hide();
 		$("#testendpanel").show();
 		stage = 3;
+		clearInterval(timer);
 	}
 	// stop timer.
 });

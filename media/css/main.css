@@ -28,14 +28,62 @@ body,html {height: 100%;background-color: #f1f1f1; }
 
 #warnquitpanel {
 	display: none;
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 5;
+}
+#warnquitpanel button,#testendpanel button
+{
+	border:0px solid black;
+    margin: 15px;
+    font-size: 20px;
+    border-radius: 3px;
+    height: auto;
+    width: auto;
+    padding: 10px 20px;
+    background: #238dd0;
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:all 0.15s ease-in;
+    -webkit-transition:all 0.15s ease-in;
+    -moz-transition:all 0.15s ease-in;
+    box-sizing:border-box;
+}
+#warnquitpanel button:hover,#testendpanel button:hover
+{
+	background: #1A5A84;
+	border: 1px solid #145279;
+}
+
+#warnquitpanel > div
+{
+	text-align: center;
+	height: auto;
+}
+.abs_center{
+	position: absolute;
+	top:0;
+	right: 0;
+	left:0;
+	bottom: 0;
+	margin: auto;
 }
 
 #testendpanel {
 	display: none;
+	background-color: #333;
 }
 
 #feedbackpanel {
 	display: none;
+	background-color: #333;
+	color: #eee;
 }
 
 .closeBox {
@@ -298,3 +346,22 @@ body,html {height: 100%;background-color: #f1f1f1; }
 	vertical-align: middle;	
 }
 /* IOWrapper Styling end */
+
+
+/*FEEDBACK AND SCORE--------------- START*/
+.scoreHolder
+{
+	line-height: 60px;
+	font-size: 35px;
+	height: 50px;
+	margin: 25px;
+}
+.scoreIs
+{
+	font-size: 45px;
+	display: inline;
+	margin:0px 10px;
+}
+
+
+/*FEEDBACK AND SCORE--------------- END*/
