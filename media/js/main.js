@@ -64,9 +64,9 @@ function flushQuestion(index) {
 	 	for(var j=0;j<quesEntry['options'].length;j++) {
 	 		if(quesEntry['options'][j]['type'] == 'text') {
 	 			if(response[index].response == j)
-	 				optionshtml += "<label><input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"</label><br>";
+	 				optionshtml += "<label><input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>"+quesEntry['options'][j]['desc']+"</label><br>";
 	 			else 
-	 				optionshtml += "<label><input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"</label><br>";
+	 				optionshtml += "<label><input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>"+quesEntry['options'][j]['desc']+"</label><br>";
 	 		}
 	 		else if(quesEntry['options'][j]['type'] == 'image')
 	 			if(response[index].response == j)
