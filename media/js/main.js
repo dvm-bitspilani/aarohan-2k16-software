@@ -1,8 +1,9 @@
 /*
 stage 0 : before test starts
 stage 1 : as soon as start button is clicked, quesanspanel is loaded, timer starts
-stage 2 : test ends, either quitting or time up, button to calculate score
-stage 3 : calculates score and displays, {we need to find a way to take in response}
+stage 2 : quit warning.
+stage 3 : test ends, button to check score and feedback
+stage 4 : check score and feedback
 */
 var stage = 0;
 
@@ -47,7 +48,8 @@ function flushQuestion(index) {
 	
  	if(quesEntry != null) {
 
-	 	$("#qno").html(index+1);
+ 		var no = Number(index)+1;
+	 	$("#qno").html("").append(no);
 
 	 	var questionhtml = quesEntry.ques;
 	 	if (quesEntry.ques_img != null) {
@@ -76,7 +78,7 @@ function flushQuestion(index) {
 
 		$("#IOContent").append(optionshtml);
 
-		current = index;
+		current = Number(index);
 		response[index].visited = true;
 		response[index].visits++;
 		updateColorCoding();
@@ -110,6 +112,24 @@ function updateColorCoding() {
 }
 
 
+function calcScore() {
+	var score = 0;
+	for(var i=0;i<set.length;i++) {
+		var marked = response[i].response;
+		if(marked == null) {
+			score += set[i].scoring[2];
+		}
+		else if(Number(marked) == set[i].correct) {
+			score += set[i].scoring[0];
+		}
+		else {
+			score += set[i].scoring[1];
+		}
+	}
+	return score;
+}
+
+
 /*
 Start button click event.
 */
@@ -118,13 +138,86 @@ $("#start_test").click(function() {
 	populateQuestionsList();
 	flushQuestion(0);
 	$("#quesanspanel").show();
-
+	stage = 1;
 	// start the timer and set up handler to update clock.
-
-
 });
 
 
+/*
+quit test button
+*/
+$("#quitTest").click(function() {
+	if(stage == 1) {
+		$("#quesanspanel").hide();
+		$("#warnquitpanel").show();
+		stage = 2;
+	}
+});
+
+
+/*
+warn page return button, brings you back to test.
+*/
+$("#warnquitreturn").click(function() {
+	if(stage == 2) {			
+		$("#quesanspanel").show();
+		$("#warnquitpanel").hide();
+		stage = 1;
+	}
+});
+
+
+/*
+irrationally quits the game, go home you are drunk.
+*/
+$("#warnquitconfirm").click(function() {
+	if(stage == 2) {
+		$("#warnquitpanel").hide();
+		$("#testendpanel").show();
+		stage = 3;
+	}
+	// stop timer.
+});
+
+
+/*
+calculates score, useless !!!
+*/
+$("#scorecalcbutton").click(function() {
+	if(stage == 3) {
+		var thescoreis = calcScore();
+		$(".scoreIs").html(thescoreis);
+		$("#testendpanel").hide();
+		$("#feedbackpanel").show();
+		stage = 4;
+	}
+});
+
+
+
+/*
+downloads the feedback and student info !
+*/
+$("#feedbackSubmit").click(function(e) {
+	e.preventDefault();
+	if(stage == 4) {
+		var info = {};
+		info['name'] = $("#feedbackName").val();
+		info['mail'] = $("#feedbackMail").val();
+		info['phno'] = $("#feedbackPhno").val();
+		info['feed'] = $("#feedbackField").val();
+		console.log(info);
+	}
+});
+
+
+
+
+
+
+/*
+quesanspanel button functionalities
+*/
 $("#back").click(function() {
 	if(current == 0)
 		flushQuestion(set.length - 1);
@@ -147,6 +240,4 @@ $("#save").click(function() {
 	}
 
 	flushQuestion(((current+1)%(set.length)));	
-
-
 });

@@ -26,6 +26,18 @@ body,html {height: 100%;background-color: #f1f1f1; }
 	display: none;
 }
 
+#warnquitpanel {
+	display: none;
+}
+
+#testendpanel {
+	display: none;
+}
+
+#feedbackpanel {
+	display: none;
+}
+
 .closeBox {
 	position:fixed;
 	color:white;
@@ -96,10 +108,11 @@ body,html {height: 100%;background-color: #f1f1f1; }
 	width: 90px;
 	float:right;
 	color:white;
-	line-height: 50px;
+	line-height: 60px;
 	font-weight: 900;
-	font-size: 60px;
+	font-size: 50px;
 	text-align: center;
+	cursor: pointer;
 }
 
 
