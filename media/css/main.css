@@ -1,4 +1,4 @@
-/* if u change the css, which u will, dont do anything to the `NEEDED` css - that will remain as-it-is */
+ if u change the css, which u will, dont do anything to the `NEEDED` css - that will remain as-it-is */
 
 /* universal */
 *
@@ -9,7 +9,12 @@
 	overflow: hidden;
 }
 
-body,html {height: 100%;background-color: #f1f1f1; }
+body,html {
+	height: 100%;
+	background-color: #f1f1f1; 
+	margin:0;
+	padding:0;
+}
 
 /* Blackout */
 
@@ -119,7 +124,49 @@ body,html {height: 100%;background-color: #f1f1f1; }
 }
 
 /* Blackout Styling Ends */
-
+/*Initial page*/
+#start_panel{
+	width: 100%;
+	height: 100%;
+	background: #2F719C;
+	font-family: Asans;
+	padding: 15px 0;
+}
+#instrs{
+	width: 90%;
+	margin: auto;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 0 black;
+	padding: 25px 50px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#instrs ol,#instrs ul{
+	padding-left: 25px;
+}
+#instrs ol>li{
+	margin: 15px 0;
+}
+#instrs ul>li{
+	margin: 5px 0;
+}
+#aarohan_logo{
+	width: 350px;
+	display: block;
+	margin: auto;
+}
+#start_test{
+    display: block;
+	margin: auto;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 0;
+    background-color: #34CC30;
+    color: white;
+    cursor:pointer;
+}
+/*Initial page END*/
 
 /* topbar */
 .topBar {
@@ -364,4 +411,4 @@ body,html {height: 100%;background-color: #f1f1f1; }
 }
 
 
-/*FEEDBACK AND SCORE--------------- END*/
+/*FEEDBACK AND SCORE--------------- END
