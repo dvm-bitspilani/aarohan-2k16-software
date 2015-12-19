@@ -9,7 +9,7 @@
 	overflow: hidden;
 }
 
-body,html {height: 100%;background-color: #f1f1f1; }
+body,html {height: 100%;background-color: #f1f1f1;overflow: hidden; }
 
 /* Blackout */
 
@@ -124,6 +124,7 @@ body,html {height: 100%;background-color: #f1f1f1; }
 /* topbar */
 .topBar {
 	top: 0px;
+	left:0;
 	position: fixed;
 	width:100%;
 	z-index: 1;
@@ -236,10 +237,10 @@ body,html {height: 100%;background-color: #f1f1f1; }
 .questionsList {
 	width: 320px;
 	height: 110px;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 	margin: 2px;
 	height: calc(100% - 60px);
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .quesbutton {
