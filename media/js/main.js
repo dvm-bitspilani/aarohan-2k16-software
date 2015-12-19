@@ -64,15 +64,15 @@ function flushQuestion(index) {
 	 	for(var j=0;j<quesEntry['options'].length;j++) {
 	 		if(quesEntry['options'][j]['type'] == 'text') {
 	 			if(response[index].response == j)
-	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 				optionshtml += "<label><input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"</label><br>";
 	 			else 
-	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 				optionshtml += "<label><input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"</label><br>";
 	 		}
 	 		else if(quesEntry['options'][j]['type'] == 'image')
 	 			if(response[index].response == j)
-	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
+	 				optionshtml += "<label><input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'></label><br>";
 	 			else 
-	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
+	 				optionshtml += "<label><input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'></label><br>";
 
 	 	}
 
@@ -111,6 +111,34 @@ function updateColorCoding() {
 	}
 }
 
+//------TIMER
+var now=null;
+mins = 60;
+secs = 0;
+function secondsLeft() {
+  if((secs-1)>=0)
+  {
+  	--secs;
+  }
+  else
+  {
+  	--mins;
+  	secs=59;
+  }
+  $('#topContainer1').html(mins+':'+secs);
+  if(mins==0 &&secs==0)
+  {
+  	clearInterval(timer);
+  	//do something
+  	alert("time is up");
+  }
+}
+
+function timer_init() {
+	now = new Date();
+	$('#topContainer1').html(mins+':'+secs);
+  	timer = setInterval("secondsLeft()", 1000);
+}
 
 function calcScore() {
 	var score = 0;
@@ -140,6 +168,8 @@ $("#start_test").click(function() {
 	$("#quesanspanel").show();
 	stage = 1;
 	// start the timer and set up handler to update clock.
+	timer_init();
+
 });
 
 
@@ -153,6 +183,7 @@ $("#quitTest").click(function() {
 		stage = 2;
 	}
 });
+
 
 
 /*
