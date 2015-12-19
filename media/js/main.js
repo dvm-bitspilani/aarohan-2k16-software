@@ -50,6 +50,10 @@ function flushQuestion(index) {
 
  		var no = Number(index)+1;
 	 	$("#qno").html("").append(no);
+	 	$("#levelBox").html("").append(set[index].cat);
+	 	$(".ms_correct").html("").append(set[index].scoring[0]);
+	 	$(".ms_incorrect").html("").append(set[index].scoring[1]);
+	 	$(".ms_unattempted").html("").append(set[index].scoring[2]);
 
 	 	var questionhtml = quesEntry.ques;
 	 	if (quesEntry.ques_img != null) {
