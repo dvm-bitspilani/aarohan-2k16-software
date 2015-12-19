@@ -409,6 +409,96 @@ body,html {
 	display: inline;
 	margin:0px 10px;
 }
+.feedback_form>form
+{
+	text-align: center;
+	width:400px;
+	left:0;
+	right:0;
+	padding-top: 40px;
+	margin: auto;
+}
 
+/* form starting stylings ------------------------------- */
+.feedback_form .group        { 
+  position:relative; 
+  margin-bottom:30px; 
+}
+.feedback_form input         {
+  font-size:18px;
+  padding:10px 0px;
+  display:block;
+  width:400px;
+  border:none;
+  border-bottom:1px solid #ccc;
+  background-color: transparent;
+}
+.feedback_form input:focus     { outline:none; }
+
+/* LABEL ======================================= */
+.feedback_form label          {
+  color:#eee; 
+  font-size:15px;
+  text-transform: uppercase;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  font-weight: bold;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+}
+
+/* active state */
+.feedback_form input:focus ~ label, .feedback_form input:valid ~ label     {
+  top:-20px;
+  font-size:14px;
+  color:#4E7AC5;
+}
+/* BOTTOM BARS ================================= */
+.feedback_form .bar  { position:relative; display:block; width:100%;  margin-top: 1px; }
+.feedback_form .bar:before, .feedback_form .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#4E7AC5; 
+  transition:0.2s ease all; 
+
+}
+.feedback_form .bar:before {
+  left:50%;
+}
+.feedback_form .bar:after {
+  right:50%; 
+}
+
+/* active state */
+.feedback_form input:focus ~ .bar:before, .feedback_form input:focus ~ .bar:after {
+  width:50%;
+}
+.feedback_form input[type=number]::-webkit-inner-spin-button, 
+.feedback_form input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/* HIGHLIGHTER ================================== */
+.feedback_form .highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+
+/* ANIMATIONS ================ */
+@keyframes inputHighlighter {
+  from  { background:#4E7AC5; }
+  to    { width:0; background:transparent; }
+}
 
 /*FEEDBACK AND SCORE--------------- END
