@@ -62,15 +62,15 @@ function flushQuestion(index) {
 	 	for(var j=0;j<quesEntry['options'].length;j++) {
 	 		if(quesEntry['options'][j]['type'] == 'text') {
 	 			if(response[index].response == j)
-	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 				optionshtml += "<label><input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"</label><br>";
 	 			else 
-	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 				optionshtml += "<label><input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"</label><br>";
 	 		}
 	 		else if(quesEntry['options'][j]['type'] == 'image')
 	 			if(response[index].response == j)
-	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
+	 				optionshtml += "<label><input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'></label><br>";
 	 			else 
-	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
+	 				optionshtml += "<label><input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'></label><br>";
 
 	 	}
 
