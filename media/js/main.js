@@ -111,40 +111,28 @@ function updateColorCoding() {
 	}
 }
 
-//------TIMER
-var now=null;
-mins = 60;
-secs = '00';
-function secondsLeft() {
-  if((secs-1)>=0)
-  {
-  	secs = parseInt(secs);
-  	--secs;
-  	if(secs<10)
-  		secs= '0' + secs;
-  }
-  else
-  {
-  	mins = parseInt(mins);
-  	--mins;
-  	if(mins<10)
-  		mins= '0' + mins;
-  	secs=59;
-  }
-  $('#topContainer1').html(mins+':'+secs);
-  if(mins==0 &&secs==0)
-  {
-  	clearInterval(timer);
-  	//do something
-  	alert("time is up");
-  }
+
+var sec;
+function renderTime() {
+	sec--;
+	var secs = sec%60;
+	$('#topContainer1').html(parseInt(sec/60)+':'+(secs>9?'':'0')+secs);
+	if(sec==0)
+	{
+		clearInterval(timer);
+		//do something
+		alert("time is up");
+	}
 }
 
 function timer_init() {
-	now = new Date();
-	$('#topContainer1').html(mins+':'+secs);
-  	timer = setInterval("secondsLeft()", 1000);
+	sec = 3600;
+	$('#topContainer1').html('60:00');
+  	timer = setInterval("renderTime()", 1000);
 }
+
+// Timer End
+
 
 function calcScore() {
 	var score = 0;
@@ -161,6 +149,58 @@ function calcScore() {
 		}
 	}
 	return score;
+}
+
+
+function generateRef() {
+	var dgt = [2];
+	
+	dgt[0] = ['A','B','C','D','E','F','G','H','J','K','L','M','N','P','Q','R','S','T','U','V','W','X','Y','Z'];
+	dgt[1] = ['1','2','3','4','5','6','7','8','9','0'];
+	
+	var ref = "";
+	for(var i = 1;i<=8;i++) {
+		var set = parseInt(Math.random()*2);
+		var chr = parseInt(Math.random()*dgt[set].length);
+		ref += dgt[set][chr];
+	}
+	return ref;
+}
+
+
+function saveTextAsFile(text) {
+	var ref = generateRef();
+	text = "REF\t\t\t::\t"+ref+"\n\n"+text;
+	var textToWrite = text;
+	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+	var fileNameToSaveAs = ref+".txt";
+
+	var downloadLink = document.createElement("a");
+	downloadLink.download = fileNameToSaveAs;
+	downloadLink.innerHTML = "Download File";
+	if (window.webkitURL != null)
+	{
+		// Chrome allows the link to be clicked
+		// without actually adding it to the DOM.
+		downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+	}
+	else
+	{
+		// Firefox requires the link to be added to the DOM
+		// before it can be clicked.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+		downloadLink.onclick = destroyClickedElement;
+		downloadLink.style.display = "none";
+		document.body.appendChild(downloadLink);
+	}
+
+	downloadLink.click();
+}
+
+
+function destroyClickedElement(event)
+{
+	document.body.removeChild(event.target);
 }
 
 
@@ -243,7 +283,10 @@ $("#feedbackSubmit").click(function(e) {
 		info['mail'] = $("#feedbackMail").val();
 		info['phno'] = $("#feedbackPhno").val();
 		info['feed'] = $("#feedbackField").val();
-		console.log(info);
+		info['score'] = calcScore();
+		var text = "Name \t\t::\t"+info['name']+"\nEmail \t\t::\t"+info['mail']+"\nPhone\t\t::\t"+info['phno']+"\nFeedback \t::\t"+info['feed']+"\n\nScore \t\t::\t"+info['score'];
+		saveTextAsFile(text);
+		$(".feedback_form").html("Thank You !");
 	}
 });
 
