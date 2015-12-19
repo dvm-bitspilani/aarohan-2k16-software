@@ -342,10 +342,12 @@ body,html {
 .IOContent {
 	font-weight: 300;
 	padding: 20px;
-	font-size: 18px;
+	font-size: 1.3em;
 	text-align: justify;
 }
-
+.IOContent input[type=radio]{
+	margin-right: 10px;
+}
 .IOAnswerWrapper {
     position:absolute;
     bottom:0px;
