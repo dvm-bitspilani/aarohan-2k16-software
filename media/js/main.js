@@ -112,33 +112,27 @@ function updateColorCoding() {
 }
 
 //------TIMER
-var now=null;
-mins = 60;
-secs = 0;
-function secondsLeft() {
-  if((secs-1)>=0)
-  {
-  	--secs;
-  }
-  else
-  {
-  	--mins;
-  	secs=59;
-  }
-  $('#topContainer1').html(mins+':'+secs);
-  if(mins==0 &&secs==0)
-  {
-  	clearInterval(timer);
-  	//do something
-  	alert("time is up");
-  }
+var now=null,sec;
+function renderTime() {
+	var min = parseInt(sec/60);
+	var secs = sec%60;
+	$('#topContainer1').html(min+':'+(secs>9?'':'0')+secs);
+	sec--;
+	if(sec==0)
+	{
+		clearInterval(timer);
+		//do something
+		alert("time is up");
+	}
 }
 
 function timer_init() {
-	now = new Date();
-	$('#topContainer1').html(mins+':'+secs);
-  	timer = setInterval("secondsLeft()", 1000);
+	sec = 3600;
+  	timer = setInterval("renderTime()", 1000);
 }
+
+// Timer End
+
 
 function calcScore() {
 	var score = 0;
