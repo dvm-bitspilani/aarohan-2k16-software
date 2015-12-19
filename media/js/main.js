@@ -114,15 +114,21 @@ function updateColorCoding() {
 //------TIMER
 var now=null;
 mins = 60;
-secs = 0;
+secs = '00';
 function secondsLeft() {
   if((secs-1)>=0)
   {
+  	secs = parseInt(secs);
   	--secs;
+  	if(secs<10)
+  		secs= '0' + secs;
   }
   else
   {
+  	mins = parseInt(mins);
   	--mins;
+  	if(mins<10)
+  		mins= '0' + mins;
   	secs=59;
   }
   $('#topContainer1').html(mins+':'+secs);
