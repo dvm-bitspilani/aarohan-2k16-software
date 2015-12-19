@@ -109,6 +109,34 @@ function updateColorCoding() {
 	}
 }
 
+//------TIMER
+var now=null;
+mins = 60;
+secs = 0;
+function secondsLeft() {
+  if((secs-1)>=0)
+  {
+  	--secs;
+  }
+  else
+  {
+  	--mins;
+  	secs=59;
+  }
+  $('#topContainer1').html(mins+':'+secs);
+  if(mins==0 &&secs==0)
+  {
+  	clearInterval(timer);
+  	//do something
+  	alert("time is up");
+  }
+}
+
+function timer_init() {
+	now = new Date();
+	$('#topContainer1').html(mins+':'+secs);
+  	timer = setInterval("secondsLeft()", 1000);
+}
 
 /*
 Start button click event.
@@ -120,7 +148,7 @@ $("#start_test").click(function() {
 	$("#quesanspanel").show();
 
 	// start the timer and set up handler to update clock.
-
+	timer_init();
 
 });
 

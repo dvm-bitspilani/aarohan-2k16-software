@@ -91,14 +91,14 @@ body,html {height: 100%;background-color: #f1f1f1; }
 	border-left: 25px solid #e00c2f;
 	border-right: 10px solid #e00c2f;
 	background: #ff2a4d;
-	vertical-align: central;
+	vertical-align: middle;
 	padding: 0% 20px 0% 10px;
-	width: 90px;
+	width:110px;
 	float:right;
 	color:white;
 	line-height: 50px;
 	font-weight: 900;
-	font-size: 60px;
+	font-size: 55px;
 	text-align: center;
 }
 
@@ -245,4 +245,26 @@ body,html {height: 100%;background-color: #f1f1f1; }
     color:white;
 }
 
+#queslistref
+{
+	display: inline;	
+	margin: 0px 15px;
+	float:right;
+}
+.box
+{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background-color: white;
+	vertical-align: middle;
+	margin: 4px;
+}
+.boxtext
+{
+	font-size: 13px;
+	display: inline;
+	margin: 0px 5px;
+	vertical-align: middle;	
+}
 /* IOWrapper Styling end */
