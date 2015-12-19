@@ -158,6 +158,58 @@ function calcScore() {
 }
 
 
+function generateRef() {
+	var dgt = [2];
+	
+	dgt[0] = ['A','B','C','D','E','F','G','H','J','K','L','M','N','P','Q','R','S','T','U','V','W','X','Y','Z'];
+	dgt[1] = ['1','2','3','4','5','6','7','8','9','0'];
+	
+	var ref = "";
+	for(var i = 1;i<=8;i++) {
+		var set = parseInt(Math.random()*2);
+		var chr = parseInt(Math.random()*dgt[set].length);
+		ref += dgt[set][chr];
+	}
+	return ref;
+}
+
+
+function saveTextAsFile(text) {
+	var ref = generateRef();
+	text = "REF\t\t\t::\t"+ref+"\n\n"+text;
+	var textToWrite = text;
+	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+	var fileNameToSaveAs = ref+".txt";
+
+	var downloadLink = document.createElement("a");
+	downloadLink.download = fileNameToSaveAs;
+	downloadLink.innerHTML = "Download File";
+	if (window.webkitURL != null)
+	{
+		// Chrome allows the link to be clicked
+		// without actually adding it to the DOM.
+		downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+	}
+	else
+	{
+		// Firefox requires the link to be added to the DOM
+		// before it can be clicked.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+		downloadLink.onclick = destroyClickedElement;
+		downloadLink.style.display = "none";
+		document.body.appendChild(downloadLink);
+	}
+
+	downloadLink.click();
+}
+
+
+function destroyClickedElement(event)
+{
+	document.body.removeChild(event.target);
+}
+
+
 /*
 Start button click event.
 */
@@ -237,7 +289,10 @@ $("#feedbackSubmit").click(function(e) {
 		info['mail'] = $("#feedbackMail").val();
 		info['phno'] = $("#feedbackPhno").val();
 		info['feed'] = $("#feedbackField").val();
-		console.log(info);
+		info['score'] = calcScore();
+		var text = "Name \t\t::\t"+info['name']+"\nEmail \t\t::\t"+info['mail']+"\nPhone\t\t::\t"+info['phno']+"\nFeedback \t::\t"+info['feed']+"\n\nScore \t\t::\t"+info['score'];
+		saveTextAsFile(text);
+		$(".feedback_form").html("Thank You !");
 	}
 });
 
