@@ -199,7 +199,6 @@ function saveTextAsFile(text) {
 		downloadLink.style.display = "none";
 		document.body.appendChild(downloadLink);
 	}
-
 	downloadLink.click();
 }
 
@@ -283,8 +282,9 @@ $("#scorecalcbutton").click(function() {
 /*
 downloads the feedback and student info !
 */
-$("#feedbackSubmit").click(function(e) {
+$("#feedbackSubmit").submit(function(e) {
 	e.preventDefault();
+	console.log("yo");
 	if(stage == 4) {
 		var info = {};
 		info['name'] = $("#feedbackName").val();

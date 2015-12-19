@@ -17,7 +17,7 @@
 	</div>
 
 	<div id="start_panel" style="">
-		<div id="instrs">
+		<div id="instrs" class="abs_center">
 			<img id="aarohan_logo" src="./media/img/logo.png">
 			<h1 style="margin-bottom:5px;">Instructions</h1><hr>
 			<ol style="font-size:1.2em;">
@@ -81,7 +81,7 @@
 
 	<div id="warnquitpanel">
 		<div class="abs_center" style="height:30%;">
-		<div style="color: #eee;font-size: 35px;">Are you sure you want to quit ? There is no going back... </div>
+		<div style="color: #eee;font-size: 40px;">Are you sure you want to quit ? There is no going back... </div>
 		<button id="warnquitreturn">return back</button>
 		<button id="warnquitconfirm">quit</button>
 		</div>
@@ -95,17 +95,17 @@
 		</div>
 	</div>
 
-	<div id="feedbackpanel" class="abs_center" style="display:none;">
+	<div id="feedbackpanel" class="abs_center">
 		<!--  
 		display score and feedback form
 		-->
-		<div style="height:80%;text-align:center;">
+		<div style="text-align:center;">
 			<div class="scoreHolder">
-			Your score is : <div class="scoreIs">45</div>
+			Your score is : <div class="scoreIs"></div>
 			</div>
-			<h3>FEEDBACK</h3>
 			<div class="feedback_form">
-				<form>
+				<div >FEEDBACK</div>
+				<form  id="feedbackSubmit">
 					<div class="group">      
 						<input id="feedbackName" type="text" required>
 						<span class="highlight"></span>
@@ -124,11 +124,13 @@
 						<span class="bar"></span>
 						<label>Phone Number</label>
 					</div>
-
-				Any Improvements or Suggestions regarding AAROHAN 2016 : <br>
-				<textarea id="feedbackField"></textarea>
-				<br>
-				<button type="submit" id="feedbackSubmit">SUBMIT</button>
+					<div class="group">      
+						<textarea id="feedbackField" required></textarea> 
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Any Improvements or Suggestions regarding AAROHAN 2016 :</label>
+					</div>
+				<button type="submit">SUBMIT</button>
 				</form>
 			</div>
 		</div>	
