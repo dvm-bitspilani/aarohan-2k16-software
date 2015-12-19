@@ -112,12 +112,11 @@ function updateColorCoding() {
 }
 
 //------TIMER
-var now=null,sec;
+var sec;
 function renderTime() {
-	var min = parseInt(sec/60);
-	var secs = sec%60;
-	$('#topContainer1').html(min+':'+(secs>9?'':'0')+secs);
 	sec--;
+	var secs = sec%60;
+	$('#topContainer1').html(parseInt(sec/60)+':'+(secs>9?'':'0')+secs);
 	if(sec==0)
 	{
 		clearInterval(timer);
@@ -128,6 +127,7 @@ function renderTime() {
 
 function timer_init() {
 	sec = 3600;
+	$('#topContainer1').html('60:00');
   	timer = setInterval("renderTime()", 1000);
 }
 
