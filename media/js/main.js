@@ -28,7 +28,7 @@ function populateQuestionsList() {
 	var html = "";
 	for(obj in set) {
 		var qno = "Q. "+set[obj].num;
-		var frame = "<button id='q"+set[obj].num+"' value='"+set[obj].num+"' class='quesbutton unattempted-ques'>"+qno+"</button>"
+		var frame = "<button id='q"+set[obj].num+"' value='"+obj+"' class='quesbutton unattempted-ques'>"+qno+"</button>"
 		html += frame;
 	}
 	$("#questionsList").html(html);
@@ -42,18 +42,12 @@ function populateQuestionsList() {
 /*
 Changes to a specific question on the panel 
 */
-function flushQuestion(number) {
-	var quesEntry = null;
-	for(var i=0;i<set.length;i++) {
-		if(set[i].num == number) {
-			quesEntry = set[i];
-			break;
-		}
- 	}
-
+function flushQuestion(index) {
+	var quesEntry = set[index];
+	
  	if(quesEntry != null) {
 
-	 	$("#qno").html(number);
+	 	$("#qno").html(index+1);
 
 	 	var questionhtml = quesEntry.ques;
 	 	if (quesEntry.ques_img != null) {
@@ -67,31 +61,52 @@ function flushQuestion(number) {
 
 	 	for(var j=0;j<quesEntry['options'].length;j++) {
 	 		if(quesEntry['options'][j]['type'] == 'text') {
-	 			if(response[number-1].response == j)
-	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 			if(response[index].response == j)
+	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
 	 			else 
-	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
+	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;&nbsp;"+quesEntry['options'][j]['desc']+"<br>";
 	 		}
 	 		else if(quesEntry['options'][j]['type'] == 'image')
-	 			if(response[number-1].response == j)
-	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
+	 			if(response[index].response == j)
+	 				optionshtml += "<input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
 	 			else 
-	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+number+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
+	 				optionshtml += "<input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'><br>";
 
 	 	}
 
 		$("#IOContent").append(optionshtml);
 
-		current = number;
-		response[number-1].visited = true;
-		response[number-1].visits++;
+		current = index;
+		response[index].visited = true;
+		response[index].visits++;
+		updateColorCoding();
 	}
 
 	else {
-		console.log("call to : "+number);
+		console.log("call to : "+index);
 		console.log("privacy tampered !");
 	}
 
+}
+
+function updateColorCoding() {
+	for(var i=0;i<set.length;i++) {
+		if(i == current) {
+			// blue
+			$("#q"+(i+1)).css({"background-color" : "#238dd0", "color" : "white"});
+		}
+		else if(response[i].response != null) {
+			// green
+			$("#q"+(i+1)).css({"background-color" : "#a9e339", "color" : "black"});
+		}
+		else if(response[i].visited == true) {
+			//red
+			$("#q"+(i+1)).css({"background-color" : "#ff2a4d", "color" : "black"});
+		}
+		else {
+			$("#q"+(i+1)).css({"background-color" : "#eee", "color" : "black"});
+		}
+	}
 }
 
 
@@ -101,7 +116,7 @@ Start button click event.
 $("#start_test").click(function() {
 	$("#start_panel").hide();
 	populateQuestionsList();
-	flushQuestion(1);
+	flushQuestion(0);
 	$("#quesanspanel").show();
 
 	// start the timer and set up handler to update clock.
@@ -111,23 +126,27 @@ $("#start_test").click(function() {
 
 
 $("#back").click(function() {
-	flushQuestion((Math.abs(current-2)%(set.length)) + 1);
+	if(current == 0)
+		flushQuestion(set.length - 1);
+	else
+		flushQuestion(current-1);
 });
 
 
 $("#skip").click(function() {
-	flushQuestion(((current)%(set.length)) + 1);
+	flushQuestion(((current+1)%(set.length)));
 });
 
 $("#save").click(function() {
 	var ans = $("input:checked").val()
 	if(ans == undefined) {
-		response[current-1].response = null;
+		response[current].response = null;
 	}
 	else {
-		response[current-1].response = Number(ans);
+		response[current].response = Number(ans);
 	}
 
-	flushQuestion((Math.abs(current-2)%(set.length)) + 1);
+	flushQuestion(((current+1)%(set.length)));	
+
 
 });
