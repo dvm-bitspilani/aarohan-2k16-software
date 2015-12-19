@@ -87,12 +87,29 @@
 			<h3>FEEDBACK</h3>
 			<div class="feedback_form">
 				<form>
-				Name  : <br><input required id="feedbackName"><br>
-				Email : <br><input required type="email" id="feedbackMail"><br>
-				Phone No : <br><input required id="feedbackPhno"><br>
+					<div class="group">      
+						<input id="feedbackName" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Name</label>
+					</div>
+					<div class="group">      
+						<input id="feedbackMail" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Email</label>
+					</div>
+					<div class="group">      
+						<input id="feedbackPhno" type="number" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Phone Number</label>
+					</div>
+
 				Any Improvements or Suggestions regarding AAROHAN 2016 : <br>
 				<textarea id="feedbackField"></textarea>
-				<input type="submit" id="feedbackSubmit">
+				<br>
+				<button type="submit" id="feedbackSubmit">SUBMIT</button>
 				</form>
 			</div>
 		</div>	
