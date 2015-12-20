@@ -50,6 +50,10 @@ function flushQuestion(index) {
 
  		var no = Number(index)+1;
 	 	$("#qno").html("").append(no);
+	 	$("#levelBox").html("").append(set[index].cat);
+	 	$(".ms_correct").html("").append(set[index].scoring[0]);
+	 	$(".ms_incorrect").html("").append(set[index].scoring[1]);
+	 	$(".ms_unattempted").html("").append(set[index].scoring[2]);
 
 	 	var questionhtml = quesEntry.ques;
 	 	if (quesEntry.ques_img != null) {
@@ -195,7 +199,6 @@ function saveTextAsFile(text) {
 		downloadLink.style.display = "none";
 		document.body.appendChild(downloadLink);
 	}
-
 	downloadLink.click();
 }
 
@@ -279,8 +282,9 @@ $("#scorecalcbutton").click(function() {
 /*
 downloads the feedback and student info !
 */
-$("#feedbackSubmit").click(function(e) {
+$("#feedbackSubmit").submit(function(e) {
 	e.preventDefault();
+	console.log("yo");
 	if(stage == 4) {
 		var info = {};
 		info['name'] = $("#feedbackName").val();

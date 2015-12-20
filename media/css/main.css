@@ -9,11 +9,17 @@
 	overflow: hidden;
 }
 
+
 body,html {
 	height: 100%;
 	background-color: #f1f1f1; 
 	margin:0;
 	padding:0;
+	overflow: hidden;
+	cursor: default;
+	font-family: "ASans";
+	margin: 0;
+	overflow: hidden;
 }
 
 /* Blackout */
@@ -38,7 +44,7 @@ body,html {
 	left:0;
 	height: 100%;
 	width: 100%;
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0.9);
 	z-index: 5;
 }
 #warnquitpanel button,#testendpanel button
@@ -50,7 +56,6 @@ body,html {
     height: auto;
     width: auto;
     padding: 10px 20px;
-    background: #238dd0;
     color:white;
     font-weight: bold;
     text-transform: uppercase;
@@ -59,12 +64,17 @@ body,html {
     -webkit-transition:all 0.15s ease-in;
     -moz-transition:all 0.15s ease-in;
     box-sizing:border-box;
+    outline: none;
 }
-#warnquitpanel button:hover,#testendpanel button:hover
-{
-	background: #1A5A84;
-	border: 1px solid #145279;
-}
+#testendpanel button{background: #238dd0;}
+#testendpanel button:hover{background: #1A5A84;border: 1px solid #145279;}
+
+#warnquitreturn{background: #6EB729;}
+#warnquitreturn:hover{background: #94C535;border: 1px solid #5CAE0E;}
+
+#warnquitconfirm{background: #EF2748 ;}
+#warnquitconfirm:hover{background: #FF2A4D;border: 1px solid #D62340;}
+
 
 #warnquitpanel > div
 {
@@ -128,16 +138,18 @@ body,html {
 #start_panel{
 	width: 100%;
 	height: 100%;
-	background: #2F719C;
+	background: #123456;
 	font-family: Asans;
 	padding: 15px 0;
 }
 #instrs{
 	width: 90%;
+	height: 80%;
+	min-height: 630px;
 	margin: auto;
-	background-color: white;
-	border-radius: 10px;
-	box-shadow: 0 0 5px 0 black;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-radius: 5px;
 	padding: 25px 50px;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -160,9 +172,12 @@ body,html {
     display: block;
 	margin: auto;
     font-size: 1.2em;
-    padding: 10px 20px;
-    border: 0;
-    background-color: #34CC30;
+    font-weight: 900;
+    padding: 10px 50px;
+    border: 1px solid #5cae0e;
+    border-radius: 5px;
+    background-color: #69AB2A;
+	outline: none;
     color: white;
     cursor:pointer;
     -webkit-transition: all 0.25s ease-out;
@@ -177,6 +192,7 @@ body,html {
 /* topbar */
 .topBar {
 	top: 0px;
+	left:0;
 	position: fixed;
 	width:100%;
 	z-index: 1;
@@ -213,7 +229,6 @@ body,html {
 	font-weight: 900;
 	font-size: 50px;
 	text-align: center;
-	cursor: pointer;
 }
 
 .topContainer2 {
@@ -289,10 +304,10 @@ body,html {
 .questionsList {
 	width: 320px;
 	height: 110px;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 	margin: 2px;
 	height: calc(100% - 60px);
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .quesbutton {
@@ -301,6 +316,7 @@ body,html {
 	height: 40px;
 	border: 1px solid #aaa;
 	background-color: #eee;
+	cursor: pointer;
 }
 
 /* right elements styling end */
@@ -327,7 +343,8 @@ body,html {
 .levelBox {
 	float: left;
 	font-weight: 900;
-	width: 100px;
+	width: auto;
+	padding: 0px 10px;
 	border-radius: 5px;
 	font-size: 24px;
 	text-align: center;
@@ -345,11 +362,23 @@ body,html {
 	margin-left: 10px;
 }
 
+.mark_scheme {
+	float: right;
+	width: auto;
+	border-radius: 5px;
+	font-size: 14px;
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+
 .IOContent {
 	font-weight: 300;
 	padding: 20px;
 	font-size: 1.3em;
 	text-align: justify;
+	overflow-y: auto;
+    max-height: 70%;
 }
 .IOContent input[type=radio]{
 	margin-right: 10px;
@@ -376,6 +405,7 @@ body,html {
     padding: 5px 15px;
     background: #238dd0;
     color:white;
+    cursor: pointer;
 }
 
 #queslistref
@@ -409,7 +439,12 @@ body,html {
 	line-height: 60px;
 	font-size: 35px;
 	height: 50px;
-	margin: 25px;
+	padding: 25px;
+	width: 70%;
+	left:0;
+	right: 0;
+	margin: auto;
+	border-bottom: 1px dashed white;
 }
 .scoreIs
 {
@@ -417,14 +452,49 @@ body,html {
 	display: inline;
 	margin:0px 10px;
 }
+.feedback_form{
+	padding: 15px;
+	font-size: 30px;
+	/*background-color: white;*/
+	min-width:450px;
+	width: 50%;
+	left:0;
+	right:0;
+	margin: 30px auto; 
+}
 .feedback_form>form
 {
 	text-align: center;
-	width:400px;
+	width:450px;
 	left:0;
 	right:0;
-	padding-top: 40px;
+	padding-top:20px; 
 	margin: auto;
+}
+
+.feedback_form button
+{
+	border:0px solid black;
+    margin: 15px;
+    font-size: 20px;
+    border-radius: 3px;
+    height: auto;
+    width: auto;
+    padding: 10px 20px;
+    background: #238dd0;
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:all 0.15s ease-in;
+    -webkit-transition:all 0.15s ease-in;
+    -moz-transition:all 0.15s ease-in;
+    box-sizing:border-box;
+}
+.feedback_form button:hover
+{
+	background: #1A5A84;
+	border: 1px solid #145279;
 }
 
 /* form starting stylings ------------------------------- */
@@ -432,16 +502,21 @@ body,html {
   position:relative; 
   margin-bottom:30px; 
 }
-.feedback_form input         {
+.feedback_form input,.feedback_form textarea     {
   font-size:18px;
   padding:10px 0px;
   display:block;
-  width:400px;
+  width:100%;
+  color: #eee;
   border:none;
   border-bottom:1px solid #ccc;
   background-color: transparent;
 }
-.feedback_form input:focus     { outline:none; }
+.feedback_form textarea  
+{
+	overflow: hidden;
+}
+.feedback_form input:focus,.feedback_form textarea:focus     { outline:none; }
 
 /* LABEL ======================================= */
 .feedback_form label          {
@@ -458,20 +533,20 @@ body,html {
 }
 
 /* active state */
-.feedback_form input:focus ~ label, .feedback_form input:valid ~ label     {
+.feedback_form input:focus ~ label, .feedback_form input:valid ~ label,.feedback_form textarea:focus ~ label, .feedback_form textarea:valid ~ label      {
   top:-20px;
   font-size:14px;
-  color:#4E7AC5;
+  color:#238dd0;
 }
 /* BOTTOM BARS ================================= */
 .feedback_form .bar  { position:relative; display:block; width:100%;  margin-top: 1px; }
 .feedback_form .bar:before, .feedback_form .bar:after   {
   content:'';
-  height:2px; 
+  height:1px; 
   width:0;
   bottom:1px; 
   position:absolute;
-  background:#4E7AC5; 
+  background:#238dd0; 
   transition:0.2s ease all; 
 
 }
@@ -483,7 +558,7 @@ body,html {
 }
 
 /* active state */
-.feedback_form input:focus ~ .bar:before, .feedback_form input:focus ~ .bar:after {
+.feedback_form input:focus ~ .bar:before, .feedback_form input:focus ~ .bar:after,.feedback_form textarea:focus ~ .bar:before, .feedback_form textarea:focus ~ .bar:after {
   width:50%;
 }
 .feedback_form input[type=number]::-webkit-inner-spin-button, 
@@ -505,7 +580,7 @@ body,html {
 
 /* ANIMATIONS ================ */
 @keyframes inputHighlighter {
-  from  { background:#4E7AC5; }
+  from  { background:#238dd0; }
   to    { width:0; background:transparent; }
 }
 
