@@ -165,6 +165,12 @@ body,html {
     background-color: #34CC30;
     color: white;
     cursor:pointer;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+#start_test:hover{
+	background-color: #26A523;
 }
 /*Initial page END*/
 
