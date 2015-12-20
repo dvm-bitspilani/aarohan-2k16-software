@@ -27,7 +27,12 @@ popullates the question sidebar and add event listeners
 */
 function populateQuestionsList() {
 	var html = "";
+	var cat = "";
 	for(obj in set) {
+		if(cat != set[obj].cat){
+			html += '<div class="ques_cat_head">' + set[obj].cat +'</div>';
+			cat = set[obj].cat;
+		}
 		var qno = "Q. "+set[obj].num;
 		var frame = "<button id='q"+set[obj].num+"' value='"+obj+"' class='quesbutton unattempted-ques'>"+qno+"</button>"
 		html += frame;
@@ -74,9 +79,9 @@ function flushQuestion(index) {
 	 		}
 	 		else if(quesEntry['options'][j]['type'] == 'image')
 	 			if(response[index].response == j)
-	 				optionshtml += "<label><input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'></label><br>";
+	 				optionshtml += "<label><input type='radio' checked class='ansradio' name='answer' val='"+index+"' value='"+j+"'><img src='"+quesEntry['options'][j]['desc']+"'></label><br>";
 	 			else 
-	 				optionshtml += "<label><input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'>&nbsp;&nbsp;<img src='"+quesEntry['options'][j]['desc']+"'></label><br>";
+	 				optionshtml += "<label><input type='radio' class='ansradio' name='answer' val='"+index+"' value='"+j+"'><img src='"+quesEntry['options'][j]['desc']+"'></label><br>";
 
 	 	}
 
@@ -115,7 +120,7 @@ function updateColorCoding() {
 	}
 }
 
-
+// Timer
 var sec;
 function renderTime() {
 	sec--;
