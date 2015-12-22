@@ -314,11 +314,12 @@ $("#feedbackSubmit").submit(function(e) {
 	if(stage == 4) {
 		var info = {};
 		info['name'] = $("#feedbackName").val();
+		info['school'] = $('#feedbackSchool').val();
 		info['mail'] = $("#feedbackMail").val();
 		info['phno'] = $("#feedbackPhno").val();
 		info['feed'] = $("#feedbackField").val();
 		info['score'] = calcScore();
-		var text = "Name \t\t::\t"+info['name']+"\nEmail \t\t::\t"+info['mail']+"\nPhone\t\t::\t"+info['phno']+"\nFeedback \t::\t"+info['feed']+"\n\nScore \t\t::\t"+info['score'];
+		var text = "Name \t\t::\t"+info['name']+"\nSchool \t\t::\t"+info['school']+"\nEmail \t\t::\t"+info['mail']+"\nPhone\t\t::\t"+info['phno']+"\nFeedback \t::\t"+info['feed']+"\n\nScore \t\t::\t"+info['score'];
 		saveTextAsFile(text);
 		$(".feedback_form").html("Thank You !");
 	}
