@@ -217,7 +217,15 @@ function destroyClickedElement(event)
 /*
 Start button click event.
 */
+$('#next_instr').click(function() {
+	$('#stu_instr').fadeOut();
+	$('#stu_det').fadeIn();
+})
 $("#start_test").click(function() {
+	if($(this).hasClass('disable_start'))
+	{
+		return;
+	}
 	$("#start_panel").hide();
 	populateQuestionsList();
 	flushQuestion(0);
@@ -225,9 +233,22 @@ $("#start_test").click(function() {
 	stage = 1;
 	// start the timer and set up handler to update clock.
 	timer_init();
-
 });
-
+$(document).on('keyup',"#detSubmit input", function() {
+	var filled =true;
+	$("#detSubmit input").each(function() {
+        if(!($(this).val().length > 0)) {
+            filled=false;
+        }
+    });
+    if(filled)
+    {
+    	$('#start_test').removeClass('disable_start');
+    }
+    else{
+    	$('#start_test').addClass('disable_start');
+    }
+})
 
 /*
 quit test button

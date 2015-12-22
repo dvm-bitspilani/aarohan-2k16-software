@@ -168,7 +168,7 @@ body,html {
 	display: block;
 	margin: auto;
 }
-#start_test{
+#start_test,#next_instr{
     display: block;
 	margin: auto;
     font-size: 1.2em;
@@ -184,8 +184,21 @@ body,html {
     -moz-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
 }
-#start_test:hover{
+#start_test:hover,#next_instr:hover{
 	background-color: #26A523;
+}
+.disable_start{
+	background-color: #666 !important;
+}
+#stu_det{
+	display:none;
+	text-align: center;
+}
+#stu_det label,#stu_det input{
+	color: black;
+}
+#stu_det>form{
+	width:320px;
 }
 /*Initial page END*/
 
