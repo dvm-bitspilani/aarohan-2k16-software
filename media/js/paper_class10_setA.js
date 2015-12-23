@@ -38,7 +38,7 @@ var set = [
             "desc":"1s<sup>8</sup>."
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -3,
@@ -68,7 +68,7 @@ var set = [
             "desc":"1s<sup>1</sup>."
          }
       ],
-      "correct":"D",
+      "correct":"3",
       "scoring":[  
          4,
          -4,
@@ -98,7 +98,7 @@ var set = [
             "desc":"1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>3</sup>"
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          5,
          -5,
@@ -128,7 +128,7 @@ var set = [
             "desc":"All states have same thermal expansion"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -150,7 +150,7 @@ var set = [
             "desc":"FALSE"
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          3,
          -3,
@@ -180,7 +180,7 @@ var set = [
             "desc":"Gold"
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -1,
@@ -210,7 +210,7 @@ var set = [
             "desc":"H He Be "
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          3,
          -1,
@@ -240,7 +240,7 @@ var set = [
             "desc":"Tomato doesn’t contain any acid."
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -270,7 +270,7 @@ var set = [
             "desc":"SO<sub>2</sub>"
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -1,
@@ -300,7 +300,7 @@ var set = [
             "desc":"Green"
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          3,
          -1,
@@ -330,7 +330,7 @@ var set = [
             "desc":"The voltage drop is larger across larger resistance"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -360,7 +360,7 @@ var set = [
             "desc":"Dielectrics"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -390,7 +390,7 @@ var set = [
             "desc":"24 cm"
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          3,
          -1,
@@ -420,7 +420,7 @@ var set = [
             "desc":"None"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -3,
@@ -450,7 +450,7 @@ var set = [
             "desc":"Each of the conductors will move if not prevented from doing so."
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          4,
          -4,
@@ -480,7 +480,7 @@ var set = [
             "desc":"Live is red, neutral is yellow and earth is blue "
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          5,
          -5,
@@ -510,7 +510,7 @@ var set = [
             "desc":"4.17 m/s<sup>2</sup>"
          }
       ],
-      "correct":"D",
+      "correct":"3",
       "scoring":[  
          3,
          -1,
@@ -540,7 +540,7 @@ var set = [
             "desc":"Vaccum"
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -1,
@@ -570,7 +570,7 @@ var set = [
             "desc":"Half"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -600,7 +600,7 @@ var set = [
             "desc":"Angle of deviation"
          }
       ],
-      "correct":"D",
+      "correct":"3",
       "scoring":[  
          3,
          -1,
@@ -630,7 +630,7 @@ var set = [
             "desc":"600 degrees"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -660,7 +660,7 @@ var set = [
             "desc":"Cant be determined "
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -1,
@@ -690,7 +690,7 @@ var set = [
             "desc":"8 units"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -3,
@@ -720,7 +720,7 @@ var set = [
             "desc":"-1"
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          3,
          -1,
@@ -750,7 +750,7 @@ var set = [
             "desc":"None of these"
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -1,
@@ -780,7 +780,7 @@ var set = [
             "desc":"The probability of HHHHHHHHHH < the probability of HTHTHTHTHT"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -810,7 +810,7 @@ var set = [
             "desc":"37.5 cm<sup>2</sup>"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -840,7 +840,7 @@ var set = [
             "desc":"4"
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          3,
          -1,
@@ -870,7 +870,7 @@ var set = [
             "desc":"A integer"
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          3,
          -1,
@@ -900,7 +900,7 @@ var set = [
             "desc":"3 and 24"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -930,7 +930,7 @@ var set = [
             "desc":"media/qimg/class10_setA/a31.4.jpg"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -960,7 +960,7 @@ var set = [
             "desc":"Nonnative fish species, introduced after the dam was completed, have begun competing with the native species for food."
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -1,
@@ -990,7 +990,7 @@ var set = [
             "desc":"The degree to which the new dentures are more carefully manufactured than are ordinary dentures"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -1020,7 +1020,7 @@ var set = [
             "desc":"BBT"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -1050,7 +1050,7 @@ var set = [
             "desc":"U"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -1080,7 +1080,7 @@ var set = [
             "desc":"7C"
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -1,
@@ -1110,7 +1110,7 @@ var set = [
             "desc":"2 14"
          }
       ],
-      "correct":"D",
+      "correct":"3",
       "scoring":[  
          3,
          -1,
@@ -1140,7 +1140,7 @@ var set = [
             "desc":"5/9"
          }
       ],
-      "correct":"D",
+      "correct":"3",
       "scoring":[  
          3,
          -1,
@@ -1170,7 +1170,7 @@ var set = [
             "desc":"M + K % T x P"
          }
       ],
-      "correct":"D",
+      "correct":"3",
       "scoring":[  
          3,
          -1,
@@ -1200,7 +1200,7 @@ var set = [
             "desc":"none of these"
          }
       ],
-      "correct":"D",
+      "correct":"3",
       "scoring":[  
          3,
          -1,
@@ -1230,7 +1230,7 @@ var set = [
             "desc":"Timid"
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -1,
@@ -1260,7 +1260,7 @@ var set = [
             "desc":"arbitary"
          }
       ],
-      "correct":"C",
+      "correct":"2",
       "scoring":[  
          3,
          -1,
@@ -1290,7 +1290,7 @@ var set = [
             "desc":"Tea grows in Darjeeling"
          }
       ],
-      "correct":"D",
+      "correct":"3",
       "scoring":[  
          3,
          -1,
@@ -1320,7 +1320,7 @@ var set = [
             "desc":"Across the river was a perfect dam."
          }
       ],
-      "correct":"B",
+      "correct":"1",
       "scoring":[  
          3,
          -1,
@@ -1350,7 +1350,7 @@ var set = [
             "desc":"Snobbish"
          }
       ],
-      "correct":"A",
+      "correct":"0",
       "scoring":[  
          3,
          -1,
