@@ -393,6 +393,9 @@ body,html {
 	overflow-y: auto;
     max-height: 70%;
 }
+.IOContent > img{
+	max-width: 100%;
+}
 .IOContent input[type=radio]{
 	margin-right: 10px;
 }
