@@ -36,7 +36,7 @@ var set =[{"num":1,
       "desc":"The particles of water take up the shape of container, they are kept into."
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    3,
    -1,
@@ -66,7 +66,7 @@ var set =[{"num":1,
       "desc":"0°C or 273.16 K or 32 Fahrenheit."
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    3,
    -1,
@@ -96,7 +96,7 @@ var set =[{"num":1,
       "desc":"Water at 100°C."
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -126,7 +126,7 @@ var set =[{"num":1,
       "desc":"Ostwald"
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -156,7 +156,7 @@ var set =[{"num":1,
       "desc":"Al<sub>2</sub>O"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -186,7 +186,7 @@ var set =[{"num":1,
       "desc":"X<sub>3</sub>Y<sub>2</sub>"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -216,7 +216,7 @@ var set =[{"num":1,
       "desc":"Neutron"
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    3,
    -1,
@@ -246,7 +246,7 @@ var set =[{"num":1,
       "desc":"11"
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -276,7 +276,7 @@ var set =[{"num":1,
       "desc":"none of these"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -306,7 +306,7 @@ var set =[{"num":1,
       "desc":"Photon"
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    3,
    -1,
@@ -336,7 +336,7 @@ var set =[{"num":1,
       "desc":"Universal law of Gravitation"
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -366,7 +366,7 @@ var set =[{"num":1,
       "desc":"1:32"
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    3,
    -1,
@@ -396,7 +396,7 @@ var set =[{"num":1,
       "desc":"None of the above"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -426,7 +426,7 @@ var set =[{"num":1,
       "desc":"2760m"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -3,
@@ -456,7 +456,7 @@ var set =[{"num":1,
       "desc":"None of the above"
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    4,
    -4,
@@ -486,7 +486,7 @@ var set =[{"num":1,
       "desc":"None of the above"
    }
 ],
-"correct":"B",
+"correct":1,
 "scoring":[  
    5,
    -5,
@@ -516,7 +516,7 @@ var set =[{"num":1,
       "desc":"2 N"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -546,7 +546,7 @@ var set =[{"num":1,
       "desc":"45 m/s"
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -576,7 +576,7 @@ var set =[{"num":1,
       "desc":"Both A and B"
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -606,7 +606,7 @@ var set =[{"num":1,
       "desc":"Stationary frame"
    }
 ],
-"correct":"B",
+"correct":1,
 "scoring":[  
    3,
    -1,
@@ -636,7 +636,7 @@ var set =[{"num":1,
       "desc":"Infinite"
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    3,
    -1,
@@ -666,7 +666,7 @@ var set =[{"num":1,
       "desc":"180, 90"
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    3,
    -1,
@@ -688,7 +688,7 @@ var set =[{"num":1,
       "desc":"FALSE"
    }
 ],
-"correct":"B",
+"correct":1,
 "scoring":[  
    3,
    -3,
@@ -718,7 +718,7 @@ var set =[{"num":1,
       "desc":"8"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -748,7 +748,7 @@ var set =[{"num":1,
       "desc":"32ᴨ cm<sup>2</sup> , 16ᴨ cm<sup>3</sup>"
    }
 ],
-"correct":"B",
+"correct":1,
 "scoring":[  
    3,
    -1,
@@ -778,7 +778,7 @@ var set =[{"num":1,
       "desc":"9"
    }
 ],
-"correct":"B",
+"correct":1,
 "scoring":[  
    3,
    -1,
@@ -808,7 +808,7 @@ var set =[{"num":1,
       "desc":"10"
    }
 ],
-"correct":"B",
+"correct":1,
 "scoring":[  
    3,
    -1,
@@ -838,7 +838,7 @@ var set =[{"num":1,
       "desc":"1"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -868,7 +868,7 @@ var set =[{"num":1,
       "desc":"90°"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -898,7 +898,7 @@ var set =[{"num":1,
       "desc":"95"
    }
 ],
-"correct":"B",
+"correct":1,
 "scoring":[  
    3,
    -1,
@@ -928,7 +928,7 @@ var set =[{"num":1,
       "desc":"suggest an alternative that will reduce the effect of pollution "
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -958,7 +958,7 @@ var set =[{"num":1,
       "desc":"Josh is an outstandingly fast and accurate typist"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -988,7 +988,7 @@ var set =[{"num":1,
       "desc":"media/qimg/class9_setA/a33.3.jpg"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -1018,7 +1018,7 @@ var set =[{"num":1,
       "desc":"49"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -1048,7 +1048,7 @@ var set =[{"num":1,
       "desc":"34"
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -1078,7 +1078,7 @@ var set =[{"num":1,
       "desc":"17OR"
    }
 ],
-"correct":"B",
+"correct":1,
 "scoring":[  
    3,
    -1,
@@ -1108,7 +1108,7 @@ var set =[{"num":1,
       "desc":"5 : 75 "
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -1138,7 +1138,7 @@ var set =[{"num":1,
       "desc":"None of the above"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -1168,7 +1168,7 @@ var set =[{"num":1,
       "desc":"10"
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -1198,7 +1198,7 @@ var set =[{"num":1,
       "desc":"78 68"
    }
 ],
-"correct":"C",
+"correct":2,
 "scoring":[  
    3,
    -1,
@@ -1228,7 +1228,7 @@ var set =[{"num":1,
       "desc":"Content"
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -1258,7 +1258,7 @@ var set =[{"num":1,
       "desc":"Frightening"
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    3,
    -1,
@@ -1288,7 +1288,7 @@ var set =[{"num":1,
       "desc":"These kittens can be played with quite safely."
    }
 ],
-"correct":"D",
+"correct":3,
 "scoring":[  
    3,
    -1,
@@ -1318,7 +1318,7 @@ var set =[{"num":1,
       "desc":"This mischief a child could not have been done."
    }
 ],
-"correct":"A",
+"correct":0,
 "scoring":[  
    3,
    -1,
@@ -1348,7 +1348,7 @@ var set =[{"num":1,
       "desc":"Alege"
    }
 ],
-"correct":"B",
+"correct":1,
 "scoring":[  
    3,
    -1,
