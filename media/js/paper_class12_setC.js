@@ -323,19 +323,19 @@ var set =[
       'options':[  
          {  
             'type':'text',
-            'desc':''
+            'desc':'(2m/eB)tan<sup>-1</sup>(eBr/mv)'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'(2m/eB)tan<sup>-1</sup>(eBR/mv)'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'(2m/eB)tan<sup>-1</sup>(mv/eBR)'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'(2m/eB)tan<sup>-1</sup>(mv/eBr)'
          }
       ],
       'correct':0,
@@ -353,19 +353,19 @@ var set =[
       'options':[  
          {  
             'type':'text',
-            'desc':''
+            'desc':'(v<sup>2</sup> + (evBt/m)<sup>2</sup>)<sup>(1/2)</sup>'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'v'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'v - (evB/m)t'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'v + (evB/m)t'
          }
       ],
       'correct':0,
@@ -438,7 +438,7 @@ var set =[
    {  
       'num':15,
       'cat':'physics',
-      'ques':'INSTRUCTIONS FOR Q 15 – Q 18<br><br>Read the following passage and answer the questions below (Q 15 - Q 18)<br><br>A bird in air is diving vertically over a tank with speed 5cm/sec. Base of the tank is silvered. A fish in the tank is rising upward along the same line with speed 2cm/sec. Water level is falling at the rate of 2cm/sec. [µwater = 4/3, answer in cm/sec] <br><br> Speed of the image of the fish as seen by the bird directly is',
+      'ques':'INSTRUCTIONS FOR Q 15 – Q 18<br><br>Read the following passage and answer the questions below (Q 15 - Q 18)<br><br>A bird in air is diving vertically over a tank with speed 5cm/sec. Base of the tank is silvered. A fish in the tank is rising upward along the same line with speed 2cm/sec. Water level is falling at the rate of 2cm/sec. [µ<sub>water</sub> = 4/3, answer in cm/sec] <br><br> Speed of the image of the fish as seen by the bird directly is',
       'ques_img':null,
       'options':[  
          {  
@@ -485,7 +485,7 @@ var set =[
          },
          {  
             'type':'text',
-            'desc':' 	4'
+            'desc':'4'
          }
       ],
       'correct':0,
@@ -563,19 +563,19 @@ var set =[
       'options':[  
          {  
             'type':'text',
-            'desc':''
+            'desc':'aλ(√5 - 1)/3'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'aλ(√5 + 1)/3'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'aλ(√7 + 1)/3'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'aλ(√7 - 1)/3'
          }
       ],
       'correct':0,
@@ -593,19 +593,19 @@ var set =[
       'options':[  
          {  
             'type':'text',
-            'desc':''
+            'desc':'c√(Δm/M)'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'cΔm/(M+Δm)'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'c√(2Δm/M)'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'c√(Δm/(M+Δm)'
          }
       ],
       'correct':0,
@@ -618,7 +618,7 @@ var set =[
    {  
       'num':21,
       'cat':'mathematics',
-      'ques':'INSTRUCTIONS FOR Q 21 – Q 24<br><br>Read the following passage and answer the questions below (Q 21 - Q 24)<br><br>Two players A and B toss an unbiased coin in the cyclic order A, A, B, A, A, B … till a head appears. Let ‘X’ = a/b denotes the probability that A gets the head first and ‘Y’ that of B.<br><br> Find the number of positive integral values of c for which the equation ax<sup>2</sup> + bx + c = 0 has real solutions. (c  R)',
+      'ques':'INSTRUCTIONS FOR Q 21 – Q 24<br><br>Read the following passage and answer the questions below (Q 21 - Q 24)<br><br>Two players A and B toss an unbiased coin in the cyclic order A, A, B, A, A, B … till a head appears. Let ‘X’ = a/b denotes the probability that A gets the head first and ‘Y’ that of B.<br><br> Find the number of positive integral values of c for which the equation ax<sup>2</sup> + bx + c = 0 has real solutions. (c ∈ R)',
       'ques_img':null,
       'options':[  
          {  
@@ -648,24 +648,24 @@ var set =[
    {  
       'num':22,
       'cat':'mathematics',
-      'ques':'and , then find ',
-      'ques_img':null,
+      'ques':'',
+      'ques_img':'media/qimg/class12_setC/qpic22.jpg',
       'options':[  
          {  
             'type':'text',
-            'desc':'7'
+            'desc':'7e<sup>5</sup>'
          },
          {  
             'type':'text',
-            'desc':'6'
+            'desc':'6e<sup>5</sup>'
          },
          {  
             'type':'text',
-            'desc':'3'
+            'desc':'3e<sup>5</sup>'
          },
          {  
             'type':'text',
-            'desc':'5'
+            'desc':'5e<sup>5</sup>'
          }
       ],
       'correct':0,
@@ -683,19 +683,19 @@ var set =[
       'options':[  
          {  
             'type':'text',
-            'desc':'A'
+            'desc':'1/(b-3)'
          },
          {  
             'type':'text',
-            'desc':'B'
+            'desc':'(a-2)/b'
          },
          {  
             'type':'text',
-            'desc':'C'
+            'desc':'1/2'
          },
          {  
             'type':'text',
-            'desc':'D'
+            'desc':'1/7'
          }
       ],
       'correct':0,
@@ -708,24 +708,24 @@ var set =[
    {  
       'num':24,
       'cat':'mathematics',
-      'ques':'Consider the triangle ABC shown in the figure. a, b, c represent the lengths of the sides opposite to vertices A, B, C respectively. ‘a’ and ‘b’ are the same as that mentioned in the paragraph. AD is the median. ∠C = 60<sup>o</sup>. Find the value of ',
+      'ques':'Consider the triangle ABC shown in the figure. a, b, c represent the lengths of the sides opposite to vertices A, B, C respectively. ‘a’ and ‘b’ are the same as that mentioned in the paragraph. AD is the median. ∠C = 60<sup>o</sup>. Find the value of √(b<sup>2</sup> + c<sup>2</sup> + 2bc*cosA).',
       'ques_img':'media/qimg/class12_setC/image12.png',
       'options':[  
          {  
             'type':'text',
-            'desc':''
+            'desc':'√(43)'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'2√(43)'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'√(37)'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'2√(37)'
          }
       ],
       'correct':0,
@@ -738,24 +738,24 @@ var set =[
    {  
       'num':25,
       'cat':'mathematics',
-      'ques':'INSTRUCTIONS FOR Q 25 – Q 28<br><br>Read the following passage and answer the questions below (Q 25 - Q 28)<br><br>The gradient vector (gradient) of  at a point  is the vector  where  is the partial derivative of  w.r.t.  and is the partial derivative of  w.r.t. <br><br>The tangent plane at any point  on a surface  is perpendicular to  at , i.e.,  is the normal line to the tangent plane at a surface.<br><br>If two surfaces touch each other at a point , they will have a common tangent plane at that point, hence a common normal line, i.e., if  and  intersect at a point, then, at that point, here .<br><br>We use this to find the extreme values of a differentiable function  subject to the constraint .<br><br>Now answer the questions that follow:<br><br>  What would be the gradient of one face of a tetrahedron with its three vertices being (1,0,0), (0,2,0) and (0,0,3)?',
+      'ques':'INSTRUCTIONS FOR Q 25 – Q 28<br><br>Read the following passage and answer the questions below (Q 25 - Q 28)<br><br>The gradient vector (gradient) of f(x, y) at a point P<sub>o</sub>(x<sub>o</sub>, y<sub>o</sub>) is the vector ∇f = (∂t/∂x)<b><i>i</i></b> + (∂t/∂y)<b><i>i</i></b> where (∂t/∂x) is the partial derivative of \'f\' w.r.t. \'x\' and (∂t/∂y) is the partial derivative of \'f\' w.r.t. \'y\'<br><br>The tangent plane at any point P<sub>o</sub>(x<sub>o</sub>, y<sub>o</sub>, z<sub>o</sub>) on a surface f(x, y, z) = c is perpendicular to ∇f at P<sup>o</sup> , i.e., ∇f is the normal line to the tangent plane at a surface.<br><br>If two surfaces touch each other at a point P<sub>o</sub>(x<sub>o</sub>, y<sub>o</sub>, z<sub>o</sub>), they will have a common tangent plane at that point, hence a common normal line, i.e., if i.e., if f(x,y,z) = c and g(x,y,z) = d  intersect at a point, then, ∇f = λ∇g at that point, here λ ∈ R. .<br><br>We use this to find the extreme values of a differentiable function f(x, y, z) subject to the constraint g(x, y, z) = 0 .<br><br>Now answer the questions that follow:<br><br>  What would be the gradient of one face of a tetrahedron with its three vertices being (1,0,0), (0,2,0) and (0,0,3)?',
       'ques_img':null,
       'options':[  
          {  
             'type':'text',
-            'desc':''
+            'desc':'i + 2j + 3k'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'i + j + k'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'i + j/2 + k/3'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'i + 3j + 2k'
          }
       ],
       'correct':0,
@@ -768,24 +768,24 @@ var set =[
    {  
       'num':26,
       'cat':'mathematics',
-      'ques':'  What would be the gradient of an ellipse with X- axis as its major axis, eccentricity  and length of major axis as 10, at the point (5, 4)?',
+      'ques':'  What would be the gradient of an ellipse with X- axis as its major axis, eccentricity e = 3/5 and length of major axis as 10, at the point (5, 4)?',
       'ques_img':null,
       'options':[  
          {  
             'type':'text',
-            'desc':''
+            'desc':'0.5i + 0.4j'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'0.4i + 0.5j'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'5i + 2j'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'2i + 5j'
          }
       ],
       'correct':0,
@@ -798,24 +798,24 @@ var set =[
    {  
       'num':27,
       'cat':'mathematics',
-      'ques':'  Find the point on the sphere  which is farthest from the point (1, -1, 1)',
+      'ques':'  Find the point on the sphere x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> = 4 which is farthest from the point (1, -1, 1)',
       'ques_img':null,
       'options':[  
          {  
             'type':'text',
-            'desc':''
+            'desc':'( 1/√3 , -1/√3 , 1/√3 )'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'( -1/√3 , 2/√3 , -1/√3 )'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'( 2/√3 , -2/√3 , 2/√3 )'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'( -2/√3 , 2/√3 , -2/√3 )'
          }
       ],
       'correct':0,
@@ -828,7 +828,7 @@ var set =[
    {  
       'num':28,
       'cat':'mathematics',
-      'ques':' You are in charge of erecting a radio telescope on a newly discovered planet. To minimise interference, you want to place it where the magnetic field of the planet is weakest. The planet is spherical, with a radius of 6 units. Based on a coordinate system with the centre as origin, the strength of the magnetic field is given by . Where should you locate the telescope?',
+      'ques':' You are in charge of erecting a radio telescope on a newly discovered planet. To minimise interference, you want to place it where the magnetic field of the planet is weakest. The planet is spherical, with a radius of 6 units. Based on a coordinate system with the centre as origin, the strength of the magnetic field is given by M(x, y, z) = 6x − y<sup>2</sup> + xz + 60 . Where should you locate the telescope?',
       'ques_img':null,
       'options':[  
          {  
@@ -863,19 +863,19 @@ var set =[
       'options':[  
          {  
             'type':'text',
-            'desc':''
+            'desc':'(1/x) + (2/y) + (3/z) = 1'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'(1/x) + (2/y) + (3/z) = 2'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> = 4/9'
          },
          {  
             'type':'text',
-            'desc':''
+            'desc':'x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> = 1/9'
          }
       ],
       'correct':0,
@@ -888,12 +888,12 @@ var set =[
    {  
       'num':30,
       'cat':'mathematics',
-      'ques':' If I a + b + c I = √3; a, b, c are unit vectors, the maximum value of λ is',
+      'ques':' If | a + b + c | = √3; a, b, c are unit vectors, the maximum value of λ is',
       'ques_img':null,
       'options':[  
          {  
             'type':'text',
-            'desc':'½'
+            'desc':'1/2'
          },
          {  
             'type':'text',
