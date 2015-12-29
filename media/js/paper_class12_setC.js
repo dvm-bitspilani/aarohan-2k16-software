@@ -19,7 +19,7 @@ var set =[
       'num':1,
       'cat':'chemistry',
       'ques':' INSTRUCTIONS FOR Q 1 – Q 4<br><br>Read the following passage and answer the questions below (Q 1 - Q 4)<br><br>Psychrometric charts are experimentally determined values of relative humidity vs temperature plotted in a graph along with several other parameters. On the y axis, we are given moisture content per kg of dry air and on the x axis, we are given dry bulb temperature (in Fahrenheit). Adding to the above information, we define two types of temperatures while reading psychrometric charts, namely, dry bulb and wet bulb temperature.<br><br>The Dry Bulb temperature, usually referred to as air temperature, is the air property that is most common used. When people refer to the temperature of the air, they are normally referring to its dry bulb temperature.<br><br>The Wet Bulb temperature is the adiabatic saturation temperature. Wet Bulb temperature can be measured by using a thermometer with the bulb wrapped in wet muslin. This thermometer is then rotated in the air in a horizontal circle by winding on a thread (like the mechanics problem you’ve done in physics!!). Due to the centrifugal force and heat generated due to this act, the water begins to evaporate and after sometime reached saturation i.e. water no longer evaporated. The temperature at this point is noted and denoted as Wet bulb temperature and is always lower than dry bulb temperature.<br><br>The diagonally aligned lines (the one with higher slope) are the enthalpy curves. For a hypothetical system, we determine relative humidity content by interpolating the intersection of vertical wet bulb temperature line with top most parabolic curve on y axis.<br><br>Now answer the following questions assuming water to behave as an ideal gas.<br><br><b>Q1.</b> For 1 kg water at atmospheric pressure, calculate dry bulb temperature. (Take specific volume of water as inverse of density) (Density of water = 1000 kg/m<sup>3</sup>)',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image5.gif',
+      'ques_img':'media/qimg/class12_setC/image5.gif',
       'options':[  
          {  
             'type':'text',
@@ -139,7 +139,7 @@ var set =[
       'num':5,
       'cat':'chemistry',
       'ques':'INSTRUCTIONS FOR Q 5 – Q 8<br><br>Read the following passage and answer the questions below (Q 5 - Q 8). From Q 5 to Q 7, the marks allotment will be in Arithmetic progression with Q 5 carrying 3 marks and increasing at the rate of 1 mark per question till Q 7. This means, Q 5 carries 3 marks, Q 6 carries 4 marks and Q 7 carries 5 marks. Q 8 carries 3 marks only. NEGATIVE MARKS AWARDED PER QUESTION IS EQUAL TO POSITIVE MARKS ALLOTTED TO RESPECTIVE QUESTION.<br><br><b>Q5.</b> How many of the above are anti-aromatic compounds?',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image6.png',
+      'ques_img':'media/qimg/class12_setC/image6.png',
       'options':[  
          {  
             'type':'text',
@@ -259,7 +259,7 @@ var set =[
       'num':9,
       'cat':'chemistry',
       'ques':'Standard electrode potential data are useful for understanding the sustainability of an oxidant in a redox titration. Some half-cell reactions and their standard potentials are given below:<br><br>Identify the only incorrect statement regarding the quantitative estimation of aqueous Fe(NO<sub>3</sub>)<sub>2</sub>.',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image7.png',
+      'ques_img':'media/qimg/class12_setC/image7.png',
       'options':[  
          {  
             'type':'text',
@@ -289,7 +289,7 @@ var set =[
       'num':10,
       'cat':'chemistry',
       'ques':'For the first order parallel reaction k1 and k2 are 4 and 2 min-1 respectively at 300 K. If the activation energies for the formation of B and C are respectively 30,000 and 38.314 joule/mol respectively. The temperature at which B and C will be obtained in equimolar ratio is',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image8.png',
+      'ques_img':'media/qimg/class12_setC/image8.png',
       'options':[  
          {  
             'type':'text',
@@ -319,7 +319,7 @@ var set =[
       'num':11,
       'cat':'physics',
       'ques':'INSTRUCTIONS FOR Q 11 – Q 14<br><br>Read the following passage and answer the questions below (Q 11 - Q 14)<br><br>A direct current flows through the winding of a long cylindrical solenoid of radius R. This produces in it a uniform magnetic field of induction B. An electron flies into the solenoid along the radius between its turns (at right angles to the solenoid axis) at a velocity v. After a certain time, the electron deflected by the magnetic field leaves the solenoid. Given, m is the mass of the electron, r is the radius of the path of the electron in the solenoid, and t is the transit time of the electron in the solenoid.<br><br> What is the transit time of the electron in the solenoid?',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image9.png',
+      'ques_img':'media/qimg/class12_setC/image9.png',
       'options':[  
          {  
             'type':'text',
@@ -559,7 +559,7 @@ var set =[
       'num':19,
       'cat':'physics',
       'ques':'Determine the resistance RAB between points A and B of the frame made of thin homogeneous wire assuming that the number of successively embedded equilateral triangles (with sides decreasing by half) tends to infinity. Side AB is equal to "a" and the resistance of the unit length of the wire is equal to λ',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image10.jpeg',
+      'ques_img':'media/qimg/class12_setC/image10.jpeg',
       'options':[  
          {  
             'type':'text',
@@ -649,7 +649,7 @@ var set =[
       'num':22,
       'cat':'mathematics',
       'ques':'',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/qpic22.jpg',
+      'ques_img':'media/qimg/class12_setC/qpic22.jpg',
       'options':[  
          {  
             'type':'text',
@@ -679,7 +679,7 @@ var set =[
       'num':23,
       'cat':'mathematics',
       'ques':'During APOGEE, the technical fest of BITS Pilani, 8 teams reached the finals of an event called RoboWars. To decide the winner, a tournament ladder was designed as shown below. Teams are paired and the winner emerges to the subsequent rounds. Teams A and B are also present. What is the chance that A and B encounter each other?',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image11.png',
+      'ques_img':'media/qimg/class12_setC/image11.png',
       'options':[  
          {  
             'type':'text',
@@ -709,7 +709,7 @@ var set =[
       'num':24,
       'cat':'mathematics',
       'ques':'Consider the triangle ABC shown in the figure. a, b, c represent the lengths of the sides opposite to vertices A, B, C respectively. ‘a’ and ‘b’ are the same as that mentioned in the paragraph. AD is the median. ∠C = 60<sup>o</sup>. Find the value of √(b<sup>2</sup> + c<sup>2</sup> + 2bc*cosA).',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image12.png',
+      'ques_img':'media/qimg/class12_setC/image12.png',
       'options':[  
          {  
             'type':'text',
@@ -1070,23 +1070,23 @@ var set =[
       'num':36,
       'cat':'logical reasoning',
       'ques':'',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image13.png',
+      'ques_img':'media/qimg/class12_setC/image13.png',
       'options':[  
          {  
             'type':'image',
-            'desc':'/2016/static/aarohan/software/media/qimg/class12_setC/image14.png'
+            'desc':'media/qimg/class12_setC/image14.png'
          },
          {  
             'type':'image',
-            'desc':'/2016/static/aarohan/software/media/qimg/class12_setC/image15.png'
+            'desc':'media/qimg/class12_setC/image15.png'
          },
          {  
             'type':'image',
-            'desc':'/2016/static/aarohan/software/media/qimg/class12_setC/image16.png'
+            'desc':'media/qimg/class12_setC/image16.png'
          },
          {  
             'type':'image',
-            'desc':'/2016/static/aarohan/software/media/qimg/class12_setC/image17.png'
+            'desc':'media/qimg/class12_setC/image17.png'
          }
       ],
       'correct':1,
@@ -1190,7 +1190,7 @@ var set =[
       'num':40,
       'cat':'logical reasoning',
       'ques':'Find the missing character?',
-      'ques_img':'/2016/static/aarohan/software/media/qimg/class12_setC/image18.png',
+      'ques_img':'media/qimg/class12_setC/image18.png',
       'options':[  
          {  
             'type':'text',
